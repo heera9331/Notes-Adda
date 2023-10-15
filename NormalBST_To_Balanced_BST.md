@@ -1,4 +1,4 @@
-
+```
 class Solution{
 private:
     vector<int> BST;
@@ -22,3 +22,4 @@ public:
         return build(0,BST.size()-1);
     }
 };
+```
