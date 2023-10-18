@@ -16,5 +16,4 @@
 
 # maxKey = max(hashMap)
 # print(hashMap[maxKey])
-
-hashMap = {}
+ 
