@@ -8,3 +8,13 @@
 # st = "rahul"
 # solve(st)
 
+
+# hashMap = {}
+
+# hashMap[3] = 4;
+# hashMap[1] = 6;
+
+# maxKey = max(hashMap)
+# print(hashMap[maxKey])
+
+hashMap = {}
