@@ -32,12 +32,3 @@ b
 
 Java is not a fully object-oriented language because it supports primitive data types like int, byte, long, short, etc., which are not objects.
 
-
-# JDK (Java Development Kit)
-
-JDK is an application software. JDK is a combination of JRE and development tools.
-
-Development tools – Development Tools are software applications that help developers to make easier the entire process of developing, testing, and deployment in Java.
-
-Example
-Javac (Java compiler to produce bytecode), jdb (Java debugger), javadoc (generate documentation)
