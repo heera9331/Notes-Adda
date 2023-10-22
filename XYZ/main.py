@@ -21,3 +21,8 @@
 
 # password = getpass.getpass("Enter your password");
 # print(password)
+
+s = "str"
+
+s = list(s)
+print(str(s)[0])

@@ -94,4 +94,19 @@
 
 //   }
 // }
- 
+
+import java.util.PriorityQueue;
+
+/**
+ * Main
+ */
+public class Main {
+
+  public static void main(String[] args) {
+    PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->(a.intValue() - b.intValue()));
+    pq.add(1); 
+    pq.add(3);
+    pq.add(4); 
+    System.out.println(pq.peek());
+  }
+}

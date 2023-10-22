@@ -6,3 +6,30 @@ Everyone be able contribute with us, and improvement notes, add new approaches f
 ## Contributors
 * Heera Singh Lodhi
 * Rahul Sen
+
+
+`Must follow - Any problem follow this format/structure to publish a question/solution`
+
+# Problem Name
+
+`Link`
+
+`Description`
+
+`Testcase`
+
+## Constraints
+
+## Approach
+
+## Complexity
+
+`Time Complexity - O()`
+
+`Time Complexity - O()`
+
+## Solution
+
+```java
+
+```
