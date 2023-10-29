@@ -1,7 +1,7 @@
 ### Quiz 1
 
 ```java
- 
+
 public class Main {
 
   public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Main {
 public class Main {
 
   public static void main(String[] args) {
- 
+
     int var = 4;
     (var--);
     System.out.println(var);
@@ -38,7 +38,7 @@ public class Main {
 public class Main {
 
   public static void main(String[] args) {
- 
+
     int var = 4;
     var--;
     System.out.println(var);
@@ -46,5 +46,35 @@ public class Main {
 }
 
 // Output ?
- 
+
+```
+
+### Quiz 4
+
+```java
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(4 + 6 + 3 + "" + 1 + 3 + 8);
+    }
+}
+
+// Output ?
+
+```
+
+### Quiz 5
+
+```java
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(4 + 6 + 3 + 1 + 3 + "" + 8);
+    }
+}
+
+// Output ?
+
 ```

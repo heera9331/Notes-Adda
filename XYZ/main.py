@@ -22,7 +22,25 @@
 # password = getpass.getpass("Enter your password");
 # print(password)
 
-s = "str"
+# s = "str"
 
-s = list(s)
-print(str(s)[0])
+# s = list(s)
+# print(str(s)[0])
+
+
+
+# print(s1)
+
+
+class Student:
+    
+    def __init__(self) -> None:
+        self.name = "Heera"
+
+s1 = Student()
+s2 = Student()
+ 
+s1.__delattr__("name")
+
+print(s1.name) 
+
