@@ -39,7 +39,7 @@ Constraints:
 `
 
 
-```
+```java
 public int[] twoRepeated(int arr[], int N)
     {
         int ans[] = new int[2];

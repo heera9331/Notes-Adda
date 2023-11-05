@@ -28,19 +28,82 @@
 # print(str(s)[0])
 
 
-
 # print(s1)
 
 
-class Student:
+# class Student:
+
+#     def __init__(self) -> None:
+#         self.name = "Heera"
+
+# s1 = Student()
+# s2 = Student()
+
+# s1.__delattr__("name")
+
+# print(s1.name)
+
+# stack = [2,3]
+# print(stack)
+# stack.pop(-1)
+# print(stack)
+
+
+# a = 3
+# print(a.bit_count())
+
+# class TreeNode:
+#     def __init__(self, val):
+#         self.val = val
+#         self.left = None
+#         self.right = None
+
+
+# p = []
+# q = []
+
+# class Solution:
     
-    def __init__(self) -> None:
-        self.name = "Heera"
+#     def preorder(self, root: TreeNode) -> None:
+#         if not root:
+#             return
 
-s1 = Student()
-s2 = Student()
- 
-s1.__delattr__("name")
+#         print(root.val)
+#         self.preorder(root.left)
+#         self.preorder(root.right)
 
-print(s1.name) 
+#     def find(self, root: TreeNode, key: int, path: list[int]) -> list[int]:
+#         if not root:
+#             return
 
+#         if (root.val == key):
+#             path.append(root.val)
+#             .append(path)
+#             print(path)
+            
+#             return
+
+#         path.append(root.val)
+#         self.find(root.left, key, path)
+#         self.find(root.right, key, path)
+
+#         if (path):
+#             path.pop()
+
+
+# if __name__:
+#     root = TreeNode(1)
+
+#     root.left = TreeNode(2)
+#     root.right = TreeNode(3)
+
+#     root.left.left = TreeNode(4)
+#     root.left.right = TreeNode(5)
+
+#     root.right.left = TreeNode(6)
+#     root.right.right = TreeNode(7)
+
+#     s = Solution() 
+
+#     s.find(root, 4, [])
+#     print(ans)

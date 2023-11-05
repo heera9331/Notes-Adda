@@ -260,6 +260,8 @@
 
 // import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 /**
  * Main
  */
@@ -283,32 +285,174 @@
 // }
 
 // public class Main {
-//     static int largest2(ArrayList<Integer> arr) {
-//         int mx1 = arr.get(0);
-//         int mx2 = arr.get(0);
-//         for (int val : arr) {
+// static int largest2(ArrayList<Integer> arr) {
+// int mx1 = arr.get(0);
+// int mx2 = arr.get(0);
+// for (int val : arr) {
 
-//             if (mx1 < val) {
-//                 mx2 = mx1;
-//                 mx1 = val;
-//             }
-//         }
+// if (mx1 < val) {
+// mx2 = mx1;
+// mx1 = val;
+// }
+// }
 
-//         return mx2;
+// return mx2;
+// }
+
+// public static void main(String[] args) {
+// ArrayList<Integer> arr = new ArrayList<>();
+// arr.add(1);
+// arr.add(6);
+// arr.add(2);
+// arr.add(4);
+// arr.add(5);
+// arr.add(7);
+
+// System.out.println(largest2(arr));
+// }
+// }
+
+// public class Main {
+// public static void main(String[] args) {
+// int bitMask = 1 << 0;
+
+// System.out.println(bitMask);
+// }
+// }
+
+// import java.util.ArrayList;
+// import java.util.Collections;
+
+// /**
+// * Main
+// */
+// public class Main {
+// static int countBit(int n) {
+// return Integer.bitCount(n);
+// }
+
+// static class Pair {
+// int num;
+// int bits1;
+
+// public Pair(int num, int bits1) {
+// this.num = num;
+// this.bits1 = bits1;
+// }
+// }
+
+// static int[] fn(int arr[]) {
+// ArrayList<Pair> ans = new ArrayList<>();
+// for (int val : arr) {
+// int cnt = countBit(val);
+// ans.add(new Pair(val, cnt));
+// }
+// Collections.sort(ans, (a,b)->(a.bits1 - b.bits1));
+
+// int fans[] = new int[ans.size()];
+// int k=0;
+// for(Pair p: ans) {
+// fans[k++] = p.num;
+// }
+
+// return fans;
+// }
+
+// public static void main(String[] args) {
+
+// }
+// }
+
+// import ja/va.util.ArrayDeque;
+// import java.util.ArrayList;
+// import java.util.LinkedList;
+// import java.util.Queue;
+
+// /**
+// * Main
+// */
+// public class Main {
+// static class Node {
+// int val;
+// Node left;
+// Node right;
+
+// public Node(int val) {
+// this.val = val;
+// this.left = this.right = null;
+// }
+// }
+
+// static void preorder(Node root) {
+// if (root == null) {
+// return;
+// }
+// System.out.println(root.val);
+// preorder(root.left);
+// preorder(root.right);
+// }
+
+// static void bfs(Node root) {
+// ArrayList<ArrayList<Node>> levelOrder = new ArrayList<>();
+
+// ArrayList<Node> currLevel = new ArrayList<>();
+// ArrayList<Node> tmp = new ArrayList<>();
+
+// currLevel.add(root);
+
+// levelOrder.add(currLevel);
+
+// for(Node e: currLevel) {
+// if(e!=null)
+// tmp.add(e);
+
+// tmp.add(e.right);
+// }
+// }
+
+// public static void main(String[] args) {
+// Node root = new Node(1);
+// root.left = new Node(2);
+// root.right = new Node(3);
+
+// root.left.left = new Node(4);
+// root.left.right = new Node(5);
+
+// root.right.left = new Node(6);
+// root.right.right = new Node(7);
+// preorder(root);
+// }
+// }
+
+// public class Main {
+//   public static void main(String args[]) {
+//     int n = 5;
+//     for (int i = 0; i < n; i++) {
+//       int j = 0; 
+//       for (j = 1; j <= i; j++) { 
+//       } 
 //     }
-
-//     public static void main(String[] args) {
-//         ArrayList<Integer> arr = new ArrayList<>();
-//         arr.add(1);
-//         arr.add(6);
-//         arr.add(2);
-//         arr.add(4);
-//         arr.add(5);
-//         arr.add(7);
-
-//         System.out.println(largest2(arr));
-//     }
+//   }
 // }
 
 
 
+
+
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String args[]) {
+        // ArrayList<Integer> list = new ArrayList<>();
+        // list.add(4);
+        // System.out.println(list.remove(list.size()-1));
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        
+        map.put(3, 2);
+        map.put(2, 1);
+        
+        
+        
+    }
+}
