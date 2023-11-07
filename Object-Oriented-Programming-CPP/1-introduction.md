@@ -56,6 +56,61 @@ class Student {
 
 ```
 
+```cpp
+
+Syntax:
+class Class_Name       // class - keyword , ClassName - user-defined name
+{
+    access specifier         // can be private, public or protected
+    Data member           // variable to be used
+    Member Function() {}  // method to access data member
+};                             // class name ends with a semicolon
+
+// real world example
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+    // private and public are access specifier/modifier
+    // data member
+    private:
+    int age;
+    public:
+    string name;
+    string gender;
+
+    // constructor initialize member of class
+      public:
+Student(string name, string gender, int age) {
+        this->name = name;
+        this->gender = gender;
+        this->age = age;
+    }
+
+    // public member method used to display information of student
+    void displayInfo() {
+        cout << "Name of student is : "<< name << endl;
+        cout << "Gender of student is: " << gender << endl;
+        cout << "Age if student is: " << age << endl;
+    }
+};
+
+int main() {
+    // here s1 is object of Student class
+    Student s1("Heera Singh Lodhi", "Male", 20);
+    s1.displayInfo();
+    return 0;
+}
+
+/*
+Output
+Name of student is : Heera Singh Lodhi
+Gender of student is: Male
+Age if student is: 20
+
+*/
+```
+
 ## Object 
 
 

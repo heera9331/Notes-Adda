@@ -1,3 +1,6 @@
+# REACTJS INTERVIEW QUESTIONS AND ANSWERS
+----
+
 `What is React.js?
 `
 
@@ -61,6 +64,9 @@ React Hooks are functions that allow you to use state and other React features i
 
 React provides a component-based architecture for building reusable UI elements, offers a virtual DOM for performance optimization, and has a large and active community.
 
+---
+
+
 `Can you explain the difference between useState and useEffect in React?`
 
 `Candidate:` "Certainly! useState and useEffect are two fundamental React Hooks that serve distinct roles in a React component.
@@ -70,3 +76,6 @@ React provides a component-based architecture for building reusable UI elements,
 On the other hand, `useEffect` is designed for handling side effects within a React component. Side effects can include asynchronous operations like data fetching, DOM manipulation, and responding to state or prop changes.
 
 In summary, `useState` is all about managing and updating the local state of a component, while `useEffect` is focused on handling side effects and executing actions that need to occur after the component has rendered.
+
+
+---

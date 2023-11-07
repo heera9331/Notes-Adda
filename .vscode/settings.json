@@ -4,5 +4,8 @@
     }, 
     "C_Cpp.errorSquiggles": "disabled",
     "prettier.requirePragma": false,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

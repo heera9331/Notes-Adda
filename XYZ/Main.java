@@ -425,34 +425,42 @@ import java.util.ArrayList;
 // }
 
 // public class Main {
-//   public static void main(String args[]) {
-//     int n = 5;
-//     for (int i = 0; i < n; i++) {
-//       int j = 0; 
-//       for (j = 1; j <= i; j++) { 
-//       } 
-//     }
-//   }
+// public static void main(String args[]) {
+// int n = 5;
+// for (int i = 0; i < n; i++) {
+// int j = 0;
+// for (j = 1; j <= i; j++) {
+// }
+// }
+// }
 // }
 
+// import java.util.HashMap;
 
+// public class Main {
+// public static void main(String args[]) {
+// // ArrayList<Integer> list = new ArrayList<>();
+// // list.add(4);
+// // System.out.println(list.remove(list.size()-1));
 
+// HashMap<Integer, Integer> map = new HashMap<>();
 
+// map.put(3, 2);
+// map.put(2, 1);
 
-import java.util.HashMap;
+// }
+// }
 
-public class Main {
-    public static void main(String args[]) {
-        // ArrayList<Integer> list = new ArrayList<>();
-        // list.add(4);
-        // System.out.println(list.remove(list.size()-1));
+// public class Main {
+//     public static void main(String[] args) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-        
-        map.put(3, 2);
-        map.put(2, 1);
-        
-        
-        
-    }
-}
+//         float num1 = 1.1;
+//         double num2 = 1.1;
+
+//         if (num1 == num2) {
+//             System.out.println("Yes");
+//         } else {
+//             System.out.println("No");
+//         }
+//     }
+// }
