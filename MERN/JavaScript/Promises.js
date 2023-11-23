@@ -7,6 +7,22 @@
  * Rejected: The operation failed, and the promise has a reason for the failure.
  */
 
+/**
+ *
+ *
+ * const myPromise = new Promise((resolve, reject) => {
+ *     // Asynchronous operation (e.g., fetching data, reading a file)
+ *     // If successful, call resolve with the result
+ *     // If unsuccessful, call reject with an error
+ *   });
+ *
+ *   myPromise.then((result) => {
+ *     // Handle the fulfillment
+ *   }).catch((error) => {
+ *     // Handle the rejection
+ *   });
+ */
+
 const myPromise = new Promise((resolve, reject) => {
   let number = Number(prompt("Enter a number: "));
   if (number > 0) {
