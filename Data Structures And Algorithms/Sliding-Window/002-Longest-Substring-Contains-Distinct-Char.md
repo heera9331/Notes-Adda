@@ -1,4 +1,4 @@
-## Given a string s and a positive integer k, find the length of the longest substring that contains at most k distinct characters.
+# Given a string s and a positive integer k, find the length of the longest substring that contains at most k distinct characters.
 
 ## Testcases
 

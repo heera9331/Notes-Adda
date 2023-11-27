@@ -42,7 +42,7 @@ Example 1:
 
 ## Solution
 
-````java
+```java
   class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         int ans = Integer.MAX_VALUE;
@@ -69,9 +69,12 @@ Example 1:
         }
         return ans;
     }
-}```
+}
+```
 
-## Approach - Brute Force
+## Approach 
+
+- two pointer approach
 
 ## Complexity
 
