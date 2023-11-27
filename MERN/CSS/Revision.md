@@ -1,11 +1,12 @@
 # Introduction
 
 - CSS is the language we use to style a Web page.
-- User for styling the HTML webpage.
+- Used for styling the HTML webpage.
 - CSS stands for cascading style sheet.
 - CSS3 is the latest of version of css.
 
 **Why Use CSS?**
+
 for styling/designing of the web page.
 
 - A CSS selector selects the HTML element(s) you want to style.
