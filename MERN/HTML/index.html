@@ -6,8 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Promises</h1>
+    <input type="text" id="query" onchange="handleChange(this)" value="" />
 
-    <script src="../JavaScript/Promises.js"></script>
+    <script>
+      document.getElementById("query").addEventListener("click", function (e) {
+        console.log(e);
+      });
+
+      
+    </script>
   </body>
 </html>

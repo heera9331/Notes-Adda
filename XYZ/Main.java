@@ -23,17 +23,32 @@
 //         // System.out.println(list1);
 //         // Collections.reverse(list1);
 //         // System.out.println(list1);
-        
+
 //     }
 // }.
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        int arr[] = new int[5];
+// public class Main {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<Integer>();
+//         int arr[] = new int[5];
 
-        
-    }
-}
+//     }
+// }
+
+// import java.util.Stack;
+// import java.util.stream.Stream;
+// import java.util.Collections;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         Stack<Character> stack = new Stack<>();
+//         stack.add('3');
+//         stack.add('f');
+
+//         System.out.println(stack);
+
+//     }
+// }

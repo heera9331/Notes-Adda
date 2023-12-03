@@ -90,5 +90,26 @@
 
 
  
+# def done():
+#     print("hi")
 
+
+# done()
+
+# xyz = done
+
+# xyz()
+
+# print(float('inf') - float('inf'))
+
+# words = "this is a string, contains   many words   like this"
+
+# print(len(words.split()))
+
+# mp = {}
+
+# mp['a'] = 4
+# mp['b'] = 2
+
+# print(min(mp.keys()))
 

@@ -35,3 +35,4 @@ let array = [
 ];
 
 console.log(getNames(array));
+ 
