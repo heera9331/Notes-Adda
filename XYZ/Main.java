@@ -52,3 +52,96 @@
 
 //     }
 // }
+
+// public class Main {
+
+//     // main is method
+//     // public access modifier 
+//     public static void main(String[] args) {
+//         System.out.println("Hello World!");
+//     }
+// }
+
+// class Super {
+//     public Super() {
+//         System.out.println("Super class const");
+//     }
+
+//     void meth1() {
+//         System.out.println("Meth1 super");
+//     }
+// }
+
+// class Child extends Super {
+//     @Override
+//     void meth1() {
+//         System.out.println("meth1 in child");
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Child c1 = new Child();
+//         c1.meth1();
+//     }
+// }
+
+// class Super {
+//     Super() {
+//         System.out.println("Super const");
+//     }
+
+//     Super(int x) {
+//         System.out.println("Super const x");
+//     }
+// }
+
+// class Sub extends Super {
+//     Sub() {
+
+//         System.out.println("Sub const");
+//     }
+
+//     Sub(int x) {
+//         this();
+//         System.out.println("sub class const called");
+//     }
+
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Sub s1 = new Sub(5);
+//     }
+// }
+
+// class Outer {
+//     class Inner {
+//         void display() {
+//             System.out.println("inner display");
+//         }
+//     }
+
+//     Inner inner = new Inner();
+// };
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Outer out = new Outer();
+//         out.inner.display();
+        
+        
+//     }
+// }
+
+// import java.util.Hashtable;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Hashtable<Integer, Integer> ht = new Hashtable<>();
+
+//         ht.put(3,4);
+        
+//         System.out.println(ht);
+//     }
+// }

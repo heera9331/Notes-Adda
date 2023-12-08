@@ -190,3 +190,122 @@
 
 
 # print(all('heera'))
+
+# print(* range(5)) # not include 5
+# print(* range(2,7)) #include 2
+
+# def outer_fnx(x):
+
+#     def inner_fnx(y):
+#         return x+y
+
+#     return inner_fnx
+
+# closure = outer_fnx(10)
+# result = closure(5)
+
+# print(result)
+
+
+# class Super:
+#     def __init__(self) -> None:
+#         print("Super const called")
+
+# class Child(Super):
+#     def __init__(self) -> None:
+#         super().__init__()
+#         print("Child constructor called")
+
+# c1 = Child()
+
+
+# var = 4
+
+# def fn():
+#     var = 5
+
+# fn()
+
+# print(var)
+
+# if True:
+#     var = 4
+
+# print(var)
+
+
+# def fn():
+#     var = 5
+
+#     def fnx():
+#         nonlocal var
+#         var = var + 5
+#         print(var)
+
+#     fnx()
+
+# fn();
+
+
+# st = 'this is heera singh lodhi'
+# st = st.replace(" ", "")
+# print(st)
+# class Solution:
+
+#     def enter(expr: str):
+#         s = []
+#         expr = expr.replace(" ", "")
+
+#         for char in expr:
+#             if char == ')':
+#                 a = int(s.pop())
+#                 op = s.pop()
+#                 b = int(s.pop())
+#                 if op == '-':
+#                     s.append(b-a)
+#                 elif op == '+':
+#                     s.append(b+a)
+#                 else:
+#                     pass
+#             else:
+#                 # operands and operator and (
+#                 s.append(char)
+
+
+# class Solution:
+#     def wordPattern(self, pattern: str, s: str) -> bool:
+#         words = s.split()
+
+#         n = len(pattern)
+#         mp = {}
+
+#         for i in range(n//2):
+#             char = pattern[i]
+#             value = words[i]
+
+#             if char not in mp:
+#                 mp[char] = value
+
+#         for i in range(n):
+#             char = pattern[i]
+#             value = words[i]
+
+#             if mp[char] != value:
+#                 return False
+
+#         return True
+
+
+# class Solution:
+#     def wordPattern(self, pattern: str, s: str) -> bool:
+
+#         s = s.split()
+
+#         return (len(set(pattern)) ==
+#                 len(set(s)) ==
+#                 len(set(zip_longest(pattern,s))))
+
+# pattern = input()
+# s = input()
+# calc = Solution()
+# print(calc.wordPattern(pattern, s))
