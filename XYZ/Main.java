@@ -129,8 +129,7 @@
 //     public static void main(String[] args) {
 //         Outer out = new Outer();
 //         out.inner.display();
-        
-        
+
 //     }
 // }
 
@@ -141,7 +140,24 @@
 //         Hashtable<Integer, Integer> ht = new Hashtable<>();
 
 //         ht.put(3,4);
-        
+
 //         System.out.println(ht);
 //     }
 // }
+
+
+import java.net.URI;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Creating a URL object
+            URI url = new URI("www.google.com");
+
+            System.out.println(url.getHost());
+            System.out.println(url.getScheme());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
