@@ -145,19 +145,107 @@
 //     }
 // }
 
+// import java.net.URI;
 
-import java.net.URI;
+// public class Main {
+//     public static void main(String[] args) {
+//         try {
+//             // Creating a URL object
+//             URI url = new URI("www.google.com");
 
-public class Main {
-    public static void main(String[] args) {
-        try {
-            // Creating a URL object
-            URI url = new URI("www.google.com");
+//             System.out.println(url.getHost());
+//             System.out.println(url.getScheme());
+//         } catch (Exception e) {
+//             e.printStackTrace();
+//         }
+//     }
+// }
 
-            System.out.println(url.getHost());
-            System.out.println(url.getScheme());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
+// import java.net.ServerSocket;
+// import java.net.Socket;
+// import java.io.BufferedReader;
+// import java.io.InputStreamReader;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         try {
+//             // Create a server socket
+//             ServerSocket serverSocket = new ServerSocket(8080);
+
+//             System.out.println("Server is listening on port 8080...");
+
+//             // Wait for client connection
+//             Socket clientSocket = serverSocket.accept();
+
+//             // Read data from the client
+//             BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+//             String clientMessage = reader.readLine();
+//             System.out.println("Received from client: " + clientMessage);
+
+//             // Close sockets
+//             reader.close();
+//             clientSocket.close();
+//             serverSocket.close();
+//         } catch (Exception e) {
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+// import java.net.URI;
+// import java.net.http.*;
+// import java.net.http.HttpClient.Version;
+// import java.time.Duration;
+// import java.util.Optional;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         HttpRequest httpRequest = new HttpRequest() {
+//             @Override
+//             public String method() {
+//                 return "GET";
+//             }
+
+//             @Override
+//             public Optional<BodyPublisher> bodyPublisher() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'bodyPublisher'");
+//             }
+
+//             @Override
+//             public Optional<Duration> timeout() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'timeout'");
+//             }
+
+//             @Override
+//             public boolean expectContinue() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'expectContinue'");
+//             }
+
+//             @Override
+//             public URI uri() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'uri'");
+//             }
+
+//             @Override
+//             public Optional<Version> version() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'version'");
+//             }
+
+//             @Override
+//             public HttpHeaders headers() {
+//                 // TODO Auto-generated method stub
+//                 throw new UnsupportedOperationException("Unimplemented method 'headers'");
+//             }
+
+             
+
+//         };
+//     }
+// }
+
+
