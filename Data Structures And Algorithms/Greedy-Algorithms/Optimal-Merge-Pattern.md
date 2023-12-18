@@ -1,3 +1,0 @@
-# Optimal Merge Pattern
-
- 

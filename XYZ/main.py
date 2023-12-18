@@ -309,3 +309,18 @@
 # s = input()
 # calc = Solution()
 # print(calc.wordPattern(pattern, s))
+
+# class Item:
+#     def __init__(self, food, rating):
+#         self.food = food
+#         self.rating = rating
+
+# items = []
+# items.append(Item("mirchi", 5))
+# items.append(Item("samosa", 7))
+# items.append(Item("mirchi", 7))
+
+# # print max rating item => mirchi, 7
+# max_item = max(items, key=lambda x: x.rating)
+# print(max_item.food)
+

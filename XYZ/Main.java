@@ -192,60 +192,60 @@
 //     }
 // }
 
-// import java.net.URI;
-// import java.net.http.*;
-// import java.net.http.HttpClient.Version;
-// import java.time.Duration;
-// import java.util.Optional;
+import java.net.URI;
+import java.net.http.*;
+import java.net.http.HttpClient.Version;
+import java.time.Duration;
+import java.util.Optional;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         HttpRequest httpRequest = new HttpRequest() {
-//             @Override
-//             public String method() {
-//                 return "GET";
-//             }
+public class Main {
+    public static void main(String[] args) {
+        HttpRequest httpRequest = new HttpRequest() {
+            @Override
+            public String method() {
+                return "GET";
+            }
 
-//             @Override
-//             public Optional<BodyPublisher> bodyPublisher() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'bodyPublisher'");
-//             }
+            @Override
+            public Optional<BodyPublisher> bodyPublisher() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'bodyPublisher'");
+            }
 
-//             @Override
-//             public Optional<Duration> timeout() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'timeout'");
-//             }
+            @Override
+            public Optional<Duration> timeout() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'timeout'");
+            }
 
-//             @Override
-//             public boolean expectContinue() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'expectContinue'");
-//             }
+            @Override
+            public boolean expectContinue() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'expectContinue'");
+            }
 
-//             @Override
-//             public URI uri() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'uri'");
-//             }
+            @Override
+            public URI uri() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'uri'");
+            }
 
-//             @Override
-//             public Optional<Version> version() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'version'");
-//             }
+            @Override
+            public Optional<Version> version() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'version'");
+            }
 
-//             @Override
-//             public HttpHeaders headers() {
-//                 // TODO Auto-generated method stub
-//                 throw new UnsupportedOperationException("Unimplemented method 'headers'");
-//             }
+            @Override
+            public HttpHeaders headers() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'headers'");
+            }
 
              
 
-//         };
-//     }
-// }
+        };
+    }
+}
 
 
