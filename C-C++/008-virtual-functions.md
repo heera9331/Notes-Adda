@@ -71,3 +71,4 @@ A pure virtual function is a virtual function in a base class that has no implem
 
 -  A class containing a pure virtual function is called an abstract class, and it cannot be instantiated on its own.
 
+
