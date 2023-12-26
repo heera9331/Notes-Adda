@@ -1,9 +1,7 @@
-import { useContext } from "react";
-import { authContext } from "../contexts/authContext";
+import { useAuthContext } from "../contexts/authContext";
 
 const Login = () => {
-  const { isLogin, user, setUser,setIsLogin } = useContext(authContext);
-  console.log(isLogin);
+  const { user, setUser, logout, setIsLogin, isLogin } = useAuthContext();
 
   return (
     <div>
@@ -44,6 +42,18 @@ const Login = () => {
         </button>
       </form>
       <p>{isLogin ? "YES" : "NO"}</p>
+
+      {isLogin && (
+        <div>
+          <button
+            onClick={() => {
+              logout();
+            }}
+          >
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
