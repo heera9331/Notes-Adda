@@ -1,4 +1,5 @@
 # Array
+
 Array is a variable, which stores multiple values of similar data types of data on contiguous fashion
 (manner)
 
@@ -39,7 +40,6 @@ public class Main {
 }
 ```
 
-
 ## Arrays
 
 Arrays class provide lots of method to manipulate array.
@@ -57,7 +57,7 @@ public class Main {
 
     // compare to array object
     System.out.println(Arrays.equals(arr, arr2));
-    
+
     // array of list
     List<int[]> list = new ArrayList<>(Arrays.asList(arr));
     list.add(new int[]{3,4});
@@ -85,8 +85,52 @@ public class Main {
     System.out.println(arr[3]);
 
     // sort asc
-    Arrays.sort(arr); 
+    Arrays.sort(arr);
   }
+}
+
+```
+
+## Arrays class
+
+**Array Equality**
+
+```java
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3 };
+        int b[] = { 1, 2, 3 };
+
+        System.out.println(a.equals(b)); // false, because it check the reference of an object
+        System.out.println(Arrays.equals(a, b)); // true
+    }
+}
+
+```
+
+**Multi-Dimensional-Array-Comparison**
+
+```java
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int m1[][] = {
+            {1,2}
+        };
+        int m2[][] = {
+            {1,2}
+        };
+
+        System.out.println(Arrays.equals(m1, m2)); // not useful when array is multi-dimensional
+
+        System.out.println(Arrays.deepEquals(m1, m2)); // true
+
+    }
 }
 
 ```
