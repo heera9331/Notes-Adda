@@ -1,4 +1,4 @@
-Array
+# Array
 Array is a variable, which stores multiple values of similar data types of data on contiguous fashion
 (manner)
 
