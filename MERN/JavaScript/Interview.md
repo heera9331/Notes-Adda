@@ -42,5 +42,62 @@ const sumOfNumbers = numbers.reduce(
   0
 );
 console.log(sumOfNumbers); // Output: 15
+```
+
+
+`What is event delegation in JavaScript`
+
+Event delegation is a technique where you attach an event listener to a parent
+element instead of individual child elements. It allows handling events efficiently,
+especially for dynamically added elements.
+
+
+```html
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  // Instead of adding an event listener to each <li> element
+  // We add a single event listener to the <ul> element
+  document
+    .getElementById("myList")
+    .addEventListener("click", function (event) {
+      // Check if the clicked element is an <li> element 
+      if (event.target.tagName === "LI") {
+        // Do something with the clicked <li> element
+        console.log("Clicked on:", event.target.textContent);
+      }
+    });
+</script>
+
+
+```
+
+`Event Bubbling`
+
+What is event bubbling in JavaScript?
+
+Event bubbling is a mechanism in which an event triggered on a specific element will
+also trigger the same event on all of its parent elements. It starts from the innermost
+element and propagates upwards in the DOM tree.
+
+
+```html
+<div id="parent">
+  <button id="child">Click me</button>
+</div>
+
+<script>
+  document.getElementById('parent').addEventListener('click', function (event) {
+    console.log('Parent div clicked!');
+  });
+
+  document.getElementById('child').addEventListener('click', function (event) {
+    console.log('Button clicked!');
+  });
+</script>
 
 ```
