@@ -44,110 +44,106 @@ Components in React have lifecycle methods such as componentDidMount, componentD
 
 ```js
 // class based component
-import React, { useState } from 'react'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
 
 class Box extends React.Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			value: '' // Initialize the state property 'value'
-		}
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "", // Initialize the state property 'value'
+    };
+  }
 
-	handleInput = (e) => {
-		this.setState({ value: e.target.value })
-	}
+  handleInput = (e) => {
+    this.setState({ value: e.target.value });
+  };
 
-	componentDidUpdate() {
-		console.log('component updated')
-	}
+  componentDidUpdate() {
+    console.log("component updated");
+  }
 
-	componentDidMount() {
-		console.log('component is mounted')
-	}
+  componentDidMount() {
+    console.log("component is mounted");
+  }
 
-	componentWillUnmount() {
-		console.log('component is unmounted')
-	}
+  componentWillUnmount() {
+    console.log("component is unmounted");
+  }
 
-	render() {
-		return (
-			<div>
-				<h2>A class Component 2</h2>
-				<p>value {this.state.value}</p>
-				<label htmlFor="name">Name</label>
-				<input
-					name="name"
-					onChange={this.handleInput} // Use the arrow function to automatically bind 'this'
-					type="text"
-					placeholder="Enter name ..."
-					value={this.state.value}
-				/>
-			</div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <h2>A class Component 2</h2>
+        <p>value {this.state.value}</p>
+        <label htmlFor="name">Name</label>
+        <input
+          name="name"
+          onChange={this.handleInput} // Use the arrow function to automatically bind 'this'
+          type="text"
+          placeholder="Enter name ..."
+          value={this.state.value}
+        />
+      </div>
+    );
+  }
 }
 
 export default function App() {
-	const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
 
-	return (
-		<div className="App">
-			<h1>Hello CodeSandbox</h1>
-			<button
-				onClick={(e) => {
-					setClick(!click)
-				}}
-			>
-				Click
-			</button>
-			{click ? <Box /> : ''}
-		</div>
-	)
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <button
+        onClick={(e) => {
+          setClick(!click);
+        }}
+      >
+        Click
+      </button>
+      {click ? <Box /> : ""}
+    </div>
+  );
 }
-
 
 // functional component cycle
 
-
 const Box = () => {
-	const [value, setValue] = useState('')
+  const [value, setValue] = useState("");
 
-	const handleInput = (e) => {
-		setValue(e.target.value)
-	}
+  const handleInput = (e) => {
+    setValue(e.target.value);
+  };
 
-	useEffect(() => {
-		console.log('component is mounted')
-		// You can perform any cleanup or additional logic here if needed
-		return () => {
-			console.log('component will unmount')
-		}
-	}, [])
+  useEffect(() => {
+    console.log("component is mounted");
+    // You can perform any cleanup or additional logic here if needed
+    return () => {
+      console.log("component will unmount");
+    };
+  }, []);
 
-	useEffect(() => {
-		console.log('component updated')
-		// You can perform additional logic here after each update if needed
-	})
+  useEffect(() => {
+    console.log("component updated");
+    // You can perform additional logic here after each update if needed
+  });
 
-	return (
-		<div>
-			<h2>A Functional Component</h2>
-			<p>value {value}</p>
-			<label htmlFor="name">Name</label>
-			<input
-				name="name"
-				onChange={handleInput}
-				type="text"
-				placeholder="Enter name ..."
-				value={value}
-			/>
-		</div>
-	)
-}
-
-
+  return (
+    <div>
+      <h2>A Functional Component</h2>
+      <p>value {value}</p>
+      <label htmlFor="name">Name</label>
+      <input
+        name="name"
+        onChange={handleInput}
+        type="text"
+        placeholder="Enter name ..."
+        value={value}
+      />
+    </div>
+  );
+};
 ```
 
 `What is React Router?`
@@ -272,7 +268,7 @@ Middleware in redux, provides a way to intercept and modify action before they r
 Redux Saga is a middleware library for handling side effects in redux application.
 It allows you to manage asynchronous operations such as data fetching and handling external events, in a more organized and manageable way.
 
-![react-redux-architecture]("./imgs/react-redux-archi.png")
+![react-redux-architecture](./imgs/react-redux-archi.png)
 
 `Example`
 Steps to create setup redux state management.
