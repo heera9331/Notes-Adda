@@ -2,8 +2,7 @@
 
 ---
 
-`What is React.js?
-`
+**What is React.js?**
 
 React is an open-source JavaScript library for building user interfaces. It's maintained by Facebook and a community of developers.
 
@@ -39,9 +38,117 @@ A React event handler is a function that is called when an event (e.g., a button
 
 The virtual DOM is a lightweight in-memory representation of the actual DOM. React uses it to optimize updates and improve performance by minimizing direct manipulation of the real DOM.
 
-`Explain the component lifecycle methods in React.`
+**Explain the component lifecycle methods in React.**
 
 Components in React have lifecycle methods such as componentDidMount, componentDidUpdate, and componentWillUnmount that allow you to perform actions at various stages of a component's existence.
+
+```js
+// class based component
+import React, { useState } from 'react'
+import './App.css'
+
+class Box extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			value: '' // Initialize the state property 'value'
+		}
+	}
+
+	handleInput = (e) => {
+		this.setState({ value: e.target.value })
+	}
+
+	componentDidUpdate() {
+		console.log('component updated')
+	}
+
+	componentDidMount() {
+		console.log('component is mounted')
+	}
+
+	componentWillUnmount() {
+		console.log('component is unmounted')
+	}
+
+	render() {
+		return (
+			<div>
+				<h2>A class Component 2</h2>
+				<p>value {this.state.value}</p>
+				<label htmlFor="name">Name</label>
+				<input
+					name="name"
+					onChange={this.handleInput} // Use the arrow function to automatically bind 'this'
+					type="text"
+					placeholder="Enter name ..."
+					value={this.state.value}
+				/>
+			</div>
+		)
+	}
+}
+
+export default function App() {
+	const [click, setClick] = useState(false)
+
+	return (
+		<div className="App">
+			<h1>Hello CodeSandbox</h1>
+			<button
+				onClick={(e) => {
+					setClick(!click)
+				}}
+			>
+				Click
+			</button>
+			{click ? <Box /> : ''}
+		</div>
+	)
+}
+
+
+// functional component cycle
+
+
+const Box = () => {
+	const [value, setValue] = useState('')
+
+	const handleInput = (e) => {
+		setValue(e.target.value)
+	}
+
+	useEffect(() => {
+		console.log('component is mounted')
+		// You can perform any cleanup or additional logic here if needed
+		return () => {
+			console.log('component will unmount')
+		}
+	}, [])
+
+	useEffect(() => {
+		console.log('component updated')
+		// You can perform additional logic here after each update if needed
+	})
+
+	return (
+		<div>
+			<h2>A Functional Component</h2>
+			<p>value {value}</p>
+			<label htmlFor="name">Name</label>
+			<input
+				name="name"
+				onChange={handleInput}
+				type="text"
+				placeholder="Enter name ..."
+				value={value}
+			/>
+		</div>
+	)
+}
+
+
+```
 
 `What is React Router?`
 
@@ -78,50 +185,59 @@ In summary, `useState` is all about managing and updating the local state of a c
 
 ---
 
-Vanilla JavaScript
+**Vanilla JavaScript**
+
 Without any (UI) framework and library.
+
 ReactJS
+
 ReactJS is a library used for building user interface. It was developed by Facebook in 2013.
-Why ReactJS?
-• React is extremely popular.
-• It makes building complex, interactive UIs a breeze.
-• It’s powerful and flexible.
-• It has a very active and versatile ecosystem.
-• Components, JSX & Props
-Core Features
-• State
-• Hooks (e.g., useEffect())
-• Dynamic rendering
+
+**Why ReactJS?**
+
+- React is extremely popular.
+- It makes building complex, interactive UIs a breeze.
+- It’s powerful and flexible.
+- It has a very active and versatile ecosystem.
+- Components, JSX & Props
+  Core Features
+- State
+- Hooks (e.g., useEffect())
+- Dynamic rendering
 
 ReactJS
 ReactJS is a library used for building user interface. It was developed by Facebook in 2013.
 
-Does react use HTML?
+**Does react use HTML?**
 No, it uses JSX which is like HTML.
 
-Drawback of ReactJS
-• In integrating react with MVC framework like rails require complex configuration.
-• React requires the users have knowledge about the integration of user interface.
+**Drawback of ReactJS**
 
-What is JSX?
+- In integrating react with MVC framework like rails require complex configuration.
+- React requires the users have knowledge about the integration of user interface.
+
+**What is JSX?**
 JSX (Javascript XML) is an extension to javascript that allows you to write html-like syntax within Javascript code.
 
-• It is used to describe the structure and appearance of react components.
+- It is used to describe the structure and appearance of react components.
 
 Redux
-• Redux is a predictable state container for JavaScript applications.
-• Redux is a state management library for JavaScript applications, commonly used with react.
-React-Redux
+
+- Redux is a predictable state container for JavaScript applications.
+- Redux is a state management library for JavaScript applications, commonly used with react.
+
+## React-Redux
+
 React-Redux is a library that integrates react with redux.
 
-React-Toolkit (RTK)
+## React-Toolkit (RTK)
 
 • Redux Toolkit is the official set of tools recommended by the Redux team to simplify the process of writing Redux logic.
 
 • Redux-Toolkit is an official package from the redux team that provides utilities to simplify the process of managing state in an redux application.
 Important points
 
-Store
+**Store**
 
 • The store holds the global state of the application.
 
@@ -131,13 +247,13 @@ Store
 
 • Whenever a store is created in an app, we need to specify the reducer.
 
-Action
+**Action**
 
 Actions are plain JavaScript objects that represent changes in our application state.
 
 They are triggered by user interaction or other events.
 
-Reducers
+**Reducers**
 
 Reducers are pure functions that take the current state and action as argument and return new state.
 
@@ -156,6 +272,8 @@ Middleware in redux, provides a way to intercept and modify action before they r
 Redux Saga is a middleware library for handling side effects in redux application.
 It allows you to manage asynchronous operations such as data fetching and handling external events, in a more organized and manageable way.
 
+![react-redux-architecture]("./imgs/react-redux-archi.png")
+
 `Example`
 Steps to create setup redux state management.
 
@@ -166,78 +284,72 @@ Steps to create setup redux state management.
 5. Use Redux State and Actions in React Components
 6. npm install @reduxjs/toolkit react-redux
 
-javascript```
-
+```js
 // App/store.js
 
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
-reducer: {},
-})
+  reducer: {},
+});
 
 // index.js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import { store } from './app/store'
-import { Provider } from 'react-redux'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { store } from "./app/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
-<Provider store={store}>
-<App />
-</Provider>,
-document.getElementById('root')
-)
-
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 ```
+
+```js
 // Create a Redux State Slice -> src/features/counter/counterSlice.js
 
+import { createSlice } from "@reduxjs/toolkit";
 
- import { createSlice } from '@reduxjs/toolkit'
+const initialState = {
+  value: 0,
+};
 
- const initialState = {
-   value: 0,
- }
+export const counterSlice = createSlice({
+  name: "counter",
+  initialState,
+  reducers: {
+    increment: (state) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
+  },
+});
 
- export const counterSlice = createSlice({
-   name: 'counter',
-   initialState,
-   reducers: {
-     increment: (state) => {
-       // Redux Toolkit allows us to write "mutating" logic in reducers. It
-        // doesn't actually mutate the state because it uses the Immer library,
-        // which detects changes to a "draft state" and produces a brand new
-       // immutable state based off those changes
-       state.value += 1
-     },
-     decrement: (state) => {
-       state.value -= 1
-     },
-     incrementByAmount: (state, action) => {
-       state.value += action.payload
-     },
-   },
- })
+// Action creators are generated for each case reducer function
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
- // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
-
-export default counterSlice.reducer
-
-
+export default counterSlice.reducer;
 
 // Add Slice Reducers to the Store -> app/store.js
 
-
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from '../features/counter/counterSlice'
- export const store = configureStore({
-   reducer: {
-     counter: counterReducer,
-   },
- })
-
-
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "../features/counter/counterSlice";
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
 ```
