@@ -1,0 +1,82 @@
+{
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.multiCursorModifier": "alt",
+    "window.autoDetectHighContrast": true,
+    "editor.suggestSelection": "first",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingDelete": "always",
+    "editor.renderControlCharacters": true,
+    "editor.accessibilityPageSize": 15,
+    "terminal.explorerKind": "external",
+    "redhat.telemetry.enabled": true,
+    "screencastMode.fontSize": 32,
+    "screencastMode.keyboardOverlayTimeout": 500,
+    "screencastMode.mouseIndicatorColor": "#ff5900",
+    "screencastMode.mouseIndicatorSize": 32,
+    "screencastMode.verticalOffset": 0,
+    "editor.linkedEditing": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.stickyScroll.enabled": true,
+    // "editor.fontFamily": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+    // "editor.fontFamily": "Cascadia Code",
+    // "editor.fontFamily": "Spline Sans Mono",
+    // "editor.fontFamily": "Gabarito",
+    "editor.fontFamily": "comic neue",
+    // "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+  
+    // "editor.fontWeight": "900",
+    // "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontWeight": "900",
+    "editor.stickyScroll.defaultModel": "indentationModel",
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.reduceMotion": "on",
+    "editor.minimap.autohide": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "debug.terminal.clearBeforeReusing": true,
+    "code-runner.clearPreviousOutput": true,
+    "terminal.integrated.env.windows": {},
+    "window.commandCenter": true,
+    "liveServer.settings.donotShowInfoMsg": false,
+    "workbench.startupEditor": "none",
+    "editor.codeLensFontFamily": "Cascadia Code",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "editor.mouseWheelZoom": true,
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.accessibilitySupport": "off",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDelete": false,
+    "notebook.lineNumbers": "on",
+     
+    "git.autofetch": true,
+    "workbench.colorTheme": "Atom One Dark",
+     
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.fontSize": 20,
+    "workbench.list.smoothScrolling": true,
+    "files.autoSave": "afterDelay"
+  }
+  
