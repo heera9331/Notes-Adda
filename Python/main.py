@@ -234,3 +234,11 @@ ans = 2
 # ]
 # s1 = Solution()
 # print(s1.onesMinusZeros(mat))
+
+    def check(num: int, idx: int):
+        print(idx)
+        return num%2 == 0
+
+    a = [1,2,3]
+    
+    print(list(map(lambda num, idx : check(num, idx), a)))
