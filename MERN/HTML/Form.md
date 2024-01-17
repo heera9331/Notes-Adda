@@ -23,3 +23,27 @@ Controls the annotations and what kinds of links the form creates. Annotations i
 `method` - get, post
 
 `entype` - encryption type
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post">
+      <div>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter name" name="username" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="text" placeholder="Enter password" name="password" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+```
