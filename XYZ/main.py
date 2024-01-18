@@ -1,3 +1,24 @@
+def fn(s1: str, s2: str, i: int , j: int):
+    if i>=len(s1) or j>=len(s2):
+        return 0
+    
+    if s1[i] == s2[j]:
+        return 1+fn(s1,s2,i+1, j+1)
+    
+    t1 = fn(s1, s2, i+1, j)
+    t2 = fn(s1, s2, i, j+1)
+    
+    return max(t1, t2)
+
+def lcs(s1: str, s2: str):
+    return fn(s1, s2, 0, 0)
+
+if __name__ == '__main__':
+    s1 = "abcde"
+    s2 = "acex"
+
+    print(lcs(s1, s2))
+
 
 # class Solution:
 #     def columnWithMaxZeros(self,arr,N):
