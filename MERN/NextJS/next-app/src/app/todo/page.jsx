@@ -1,17 +1,15 @@
-import Todo from "@/lib/models";
-
 // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("/api/todo", {
+  const res = await fetch("http://localhost:3000/api/todo", {
     next: { revalidate: 3600 },
   });
-  console.log(res);
+  console.log("fetch", res);
   if (!res.ok) {
     console.log("someting went wrong");
     return;
   }
 
-  return res.json();
+  return res.json() || [];
 };
 
 const TodoPage = async () => {
