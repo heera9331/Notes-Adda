@@ -1,5 +1,7 @@
 
 
+
+
 # .1 Given a stringstrof lengthN, find the length of the largest substring which contains only consonants.
 
 # For example:str="abced", the sub-strings containing only consonants are:"bc"and"d", largest among them is"bc", so the output will be2, which is the length of largest sub-string containing only consonant.
@@ -235,10 +237,10 @@ ans = 2
 # s1 = Solution()
 # print(s1.onesMinusZeros(mat))
 
-    def check(num: int, idx: int):
-        print(idx)
-        return num%2 == 0
+    # def check(num: int, idx: int):
+    #     print(idx)
+    #     return num%2 == 0
 
-    a = [1,2,3]
+    # a = [1,2,3]
     
-    print(list(map(lambda num, idx : check(num, idx), a)))
+    # print(list(map(lambda num, idx : check(num, idx), a)))
