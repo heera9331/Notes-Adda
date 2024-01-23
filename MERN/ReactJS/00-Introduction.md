@@ -1,6 +1,6 @@
 # ReactJS - 2024
 
-![ReactJS](../imgs/reactjs.png)
+![ReactJS](./imgs/reactjs.png)
 
 ## What is ReactJS?
 
