@@ -1,5 +1,7 @@
 # ReactJS - 2024
 
+![ReactJS](../imgs/reactjs.png)
+
 ## What is ReactJS?
 
 - The library for web and native user interfaces
