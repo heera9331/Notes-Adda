@@ -1,6 +1,48 @@
 
+# class Main:
+#     def __init__(self):
+#         self.cnt = 1
+        
+#     def fn(self, a: list, b:list, i: int, j: int):
+#         if i>=len(a):
+#             return 0
+        
+#         if a[i] == b[j]: 
+#             return 1 + self.fn(a, b, i+1, j+1);
+        
+#         take = self.fn(a,b,i+1, j)
+#         notTake = self.fn(a,b,i, j+1)
+#         return max(take, notTake) 
+            
+#     def lis(self, a: list):
+#         return self.fn(a, list(a), 0, 0)
 
 
+# if __name__ == '__main__':
+#     a = [3, 10, 2, 1, 20]
+#     main = Main()
+#     print(main.lis(a))
+
+def lis(a: list):
+    ans = 1
+    n = len(a)
+    for i in range(n):
+        cnt = 1
+        val = a[i]
+        for j in range(i+1, n):
+            if a[j] > val:
+                cnt+=1
+                val = a[j]
+
+        ans = max(cnt, ans)
+        
+    return ans
+        
+    
+# a = [3, 10, 2, 1, 20]
+a = [3, 2]
+
+print(lis(a))
 
 # .1 Given a stringstrof lengthN, find the length of the largest substring which contains only consonants.
 
