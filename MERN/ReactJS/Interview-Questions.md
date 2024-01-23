@@ -10,6 +10,8 @@ React is an open-source JavaScript library for building user interfaces. It's ma
 
 JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe the structure of UI components. It looks similar to HTML but gets transpiled into JavaScript.
 
+> It allows you to write javascript with html.
+
 `What are components in React?`
 
 Components are the building blocks of a React application. They are reusable, self-contained pieces of the user interface that can be composed to build complex UIs.
