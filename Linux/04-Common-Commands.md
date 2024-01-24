@@ -1,0 +1,23 @@
+Here is a list of some basic and commonly used Unix/Linux commands:
+
+- **`pwd`**: Print the current working directory.
+- **`cd`**: Change the current working directory.
+- **`ls`**: List the files and directories in the current directory.
+- **`mkdir`**: Create a new directory.
+- **`rmdir`**: Remove an empty directory.
+- **`cp`**: Copy a file or directory.
+- **`mv`**: Move or rename a file or directory.
+- **`rm`**: Remove a file or directory.
+- **`touch`**: Create an empty file or update the timestamps of an existing file.
+- **`cat`**: Concatenate and display the contents of one or more files.
+- **`less`**: View the contents of a file one page at a time.
+- **`grep`**: Search for patterns in files.
+- **`find`**: Search for files based on various criteria.
+- **`sort`**: Sort the lines of a file.
+- **`uniq`**: Remove duplicate lines from a file.
+- **`head`**: Display the first few lines of a file.
+- **`tail`**: Display the last few lines of a file.
+- **`echo`**: Display a message or the value of a variable.
+- **`env`**: Display the environment variables.
+- **`chmod`**: Change the permissions of a file or directory.
+- **`chown`**: Change the owner and/or group of a file or directory.
