@@ -1,4 +1,27 @@
 
+# def lcs(s1: str, s2: str): 
+#     _max = 0 
+#     i = 0
+#     while i<len(s1):
+#         char = s1[i]
+#         cnt = 0
+#         j = 0
+#         while j<len(s2):
+#             while j<len(s2) and char == s2[j]:
+#                 cnt += 1  
+#                 i += 1
+#                 j += 1
+#             _max = max(_max, cnt)             
+#             j+=1
+#         i += 1
+#     return _max
+
+# s1 : str = "abcedefg"
+# s2 : str = "fgabce"
+
+# ans = lcs(s1, s2)
+# print(ans)
+
 # class Main:
 #     def __init__(self):
 #         self.cnt = 1
@@ -23,26 +46,26 @@
 #     main = Main()
 #     print(main.lis(a))
 
-def lis(a: list):
-    ans = 1
-    n = len(a)
-    for i in range(n):
-        cnt = 1
-        val = a[i]
-        for j in range(i+1, n):
-            if a[j] > val:
-                cnt+=1
-                val = a[j]
+# def lis(a: list):
+#     ans = 1
+#     n = len(a)
+#     for i in range(n):
+#         cnt = 1
+#         val = a[i]
+#         for j in range(i+1, n):
+#             if a[j] > val:
+#                 cnt+=1
+#                 val = a[j]
 
-        ans = max(cnt, ans)
+#         ans = max(cnt, ans)
         
-    return ans
+#     return ans
         
     
 # a = [3, 10, 2, 1, 20]
-a = [3, 2]
+# a = [3, 2]
 
-print(lis(a))
+# print(lis(a))
 
 # .1 Given a stringstrof lengthN, find the length of the largest substring which contains only consonants.
 

@@ -1,96 +1,117 @@
-import java.util.*;
 
-class Patient {
-    String name;
-    int pincode;
-    int phoneNumber;
-    boolean is_corona;
+// public class Main {
+// static int lcs(String s1, String s2) {
+// int max = 0;
+// int n = s1.length();
+// int m = s2.length();
 
-    Patient(String name, int pincode, int phoneNumber, boolean is_corona) {
-        this.name = name;
-        this.pincode = pincode;
-        this.phoneNumber = phoneNumber;
-        this.is_corona = is_corona;
-    }
+// for (int i = 0; i < n; i++) {
+// System.out.println(s1.substring(i, n));
+// }
 
-    String getName() {
-        return this.name;
-    }
+// return max;
+// }
 
-    int getPincode() {
-        return this.pincode;
-    }
+// public static void main(String[] args) {
+// String s1 = "abcefg";
+// String s2 = "gfabcedfg";
+// System.out.println(lcs(s1, s2));
+// }
+// }
 
-    int getPhoneNumber() {
-        return this.phoneNumber;
-    }
+// import java.util.*;
 
-    boolean getIsCorono() {
-        return this.is_corona;
-    }
-}
+// class Patient {
+// String name;
+// int pincode;
+// int phoneNumber;
+// boolean is_corona;
 
-class CoronaPatient {
-    ArrayList<Patient> patientList;
+// Patient(String name, int pincode, int phoneNumber, boolean is_corona) {
+// this.name = name;
+// this.pincode = pincode;
+// this.phoneNumber = phoneNumber;
+// this.is_corona = is_corona;
+// }
 
-    CoronaPatient() {
-        patientList = new ArrayList<>();
-    }
+// String getName() {
+// return this.name;
+// }
 
-    void addPatient(Patient newPatient) {
-        this.patientList.add(newPatient);
-    }
+// int getPincode() {
+// return this.pincode;
+// }
 
-    int countPositiveCases() {
-        int cnt = 0;
-        for (Patient patient : patientList) {
-            if (patient.getIsCorono()) {
-                cnt++;
-            }
-        }
+// int getPhoneNumber() {
+// return this.phoneNumber;
+// }
 
-        return cnt;
-    }
+// boolean getIsCorono() {
+// return this.is_corona;
+// }
+// }
 
-    int getLessCases() {
-        HashMap<Integer, Integer> cases = new HashMap<>();
+// class CoronaPatient {
+// ArrayList<Patient> patientList;
 
-        for (Patient patient : patientList) {
-            if (patient.getIsCorono()) {
-                int pincode = patient.getPincode();
-                if (cases.containsKey(pincode)) {
-                    cases.put(pincode, cases.get(pincode) + 1);
-                } else {
-                    cases.put(pincode, 1);
-                }
-            }
-        }
+// CoronaPatient() {
+// patientList = new ArrayList<>();
+// }
 
-        ArrayList<Integer> list = new ArrayList<>();
-        for (Integer key : cases.keySet()) {
-            list.add(cases.get(key));
-        }
+// void addPatient(Patient newPatient) {
+// this.patientList.add(newPatient);
+// }
 
-        Integer mn = Collections.min(list);
-        for (Integer key : cases.keySet()) {
-            if (cases.get(key) == mn) {
-                return key;
-            }
-        }
+// int countPositiveCases() {
+// int cnt = 0;
+// for (Patient patient : patientList) {
+// if (patient.getIsCorono()) {
+// cnt++;
+// }
+// }
 
-        return -1;
-    }
-}
+// return cnt;
+// }
 
-public class Main {
-    public static void main(String[] args) {
-        CoronaPatient coronaPatient = new CoronaPatient();
-        coronaPatient.addPatient(new Patient("Heera", 470673, 123, true));
-        coronaPatient.addPatient(new Patient("Deepak", 470673, 123, true));
-        coronaPatient.addPatient(new Patient("Deepak", 470003, 123, true));
-        coronaPatient.addPatient(new Patient("Yogesh", 470001, 123, false));
+// int getLessCases() {
+// HashMap<Integer, Integer> cases = new HashMap<>();
 
-        System.out.println(coronaPatient.countPositiveCases());
-        System.out.println(coronaPatient.getLessCases());
-    }
-}
+// for (Patient patient : patientList) {
+// if (patient.getIsCorono()) {
+// int pincode = patient.getPincode();
+// if (cases.containsKey(pincode)) {
+// cases.put(pincode, cases.get(pincode) + 1);
+// } else {
+// cases.put(pincode, 1);
+// }
+// }
+// }
+
+// ArrayList<Integer> list = new ArrayList<>();
+// for (Integer key : cases.keySet()) {
+// list.add(cases.get(key));
+// }
+
+// Integer mn = Collections.min(list);
+// for (Integer key : cases.keySet()) {
+// if (cases.get(key) == mn) {
+// return key;
+// }
+// }
+
+// return -1;
+// }
+// }
+
+// public class Main {
+// public static void main(String[] args) {
+// CoronaPatient coronaPatient = new CoronaPatient();
+// coronaPatient.addPatient(new Patient("Heera", 470673, 123, true));
+// coronaPatient.addPatient(new Patient("Deepak", 470673, 123, true));
+// coronaPatient.addPatient(new Patient("Deepak", 470003, 123, true));
+// coronaPatient.addPatient(new Patient("Yogesh", 470001, 123, false));
+
+// System.out.println(coronaPatient.countPositiveCases());
+// System.out.println(coronaPatient.getLessCases());
+// }
+// }
