@@ -57,7 +57,7 @@ app.listen(8000, () => {
 });
 ```
 
-****\*\*****\*\*****\*\*****package.json****\*\*****\*\*****\*\*****
+**package.json** 
 
 ```jsx
 {
@@ -81,9 +81,27 @@ app.listen(8000, () => {
 }
 ```
 
-\***\*\*\*\*\***Database Connection\***\*\*\*\*\***
+**Database Connection**
 
 ```jsx
+import mongoose from "mongoose"; 
+const connection = {};
+
+const connectToDB = async () => {
+  try {
+    if (connection.isConnected) {
+      console.log("Using existing connection");
+      return;
+    }
+    const db = await mongoose.connect(process.env.MONGO);
+    connection.isConnected = db.connections[0].readyState;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export default connectToDB;
+
 const connectDB = async () => {
   mongoose.connect("mongodb://127.0.0.1:27017/COLLECT_COUNSELLING");
   const sampleStudents = [
@@ -120,7 +138,7 @@ const connectDB = async () => {
 };
 ```
 
-**\*\***\*\***\*\***Schema+model**\*\***\*\***\*\***
+**Schema+model**
 
 ```jsx
 import mongoose from "mongoose";
