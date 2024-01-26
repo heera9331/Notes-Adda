@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const path = usePathname();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-3xl font-semibold">The NextJS App</h1>
-      <Link href={"/todo"}>Go to todos</Link>
-    </main>
+    <div className="">
+      <h2>Todos</h2>
+    </div>
   );
 }

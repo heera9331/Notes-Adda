@@ -1,20 +1,21 @@
 import mongoose from "mongoose";
 
 const connection = {};
+const mongo_uri = process.env.MONGO_LOCAL;
 
-const connectToDb = async () => {
+console.log(mongo_uri);
+
+const connectDB = async () => {
   try {
     if (connection.isConnected) {
       console.log("Using existing connection");
       return;
     }
-    const db = await mongoose.connect(
-      "mongodb+srv://heera7242:heera7242@cluster0.ikuk93s.mongodb.net/test?retryWrites=true&w=majority"
-    );
+    const db = await mongoose.connect(mongo_uri);
     connection.isConnected = db.connections[0].readyState;
   } catch (error) {
     console.log(error);
   }
 };
 
-export { connectToDb };
+export default connectDB;
