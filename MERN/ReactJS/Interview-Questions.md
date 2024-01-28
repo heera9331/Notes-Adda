@@ -119,9 +119,11 @@ const Box = () => {
   };
 
   useEffect(() => {
+    
     console.log("component is mounted");
-    // You can perform any cleanup or additional logic here if needed
+
     return () => {
+      // clean up code
       console.log("component will unmount");
     };
   }, []);
