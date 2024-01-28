@@ -16,7 +16,7 @@
 - nodejs developed by - google
 - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 - Firefox - Spider Monkey JS Engine
-- Edge - Chakra JS Enginer
+- Edge - Chakra JS Engine
 
 > Download NodeJS - https://nodejs.org/en/download/current
 

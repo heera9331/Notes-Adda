@@ -1,21 +1,26 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import axios from "axios";
 
 export default function Home() {
   const [user, setUser] = useState({ username: "", password: "" });
 
-  const handleLogin = async () => {
+  const handleRegister = async () => {
     try {
       console.log(user);
-      let res = await fetch("/api/user/login", {
+      let res = await fetch("/api/user/register", {
         method: "POST",
         body: JSON.stringify(user),
       });
-      console.log(await res.json());
+      console.log(res);
+
+      if (res.ok) {
+        console.log(await res.json());
+        alert("success");
+      } else {
+        alert("something went wrong");
+      }
     } catch (error) {
+      alert("something went wrong");
       console.log("dikkat hai", error);
     }
   };
@@ -27,7 +32,7 @@ export default function Home() {
         method="post"
         className="w-[400px] bg-stone-800 my-20 py-10 px-5 text-white  m-auto"
       >
-        <h1 className="text-2xl font-semibold text-center">Login</h1>
+        <h1 className="text-2xl font-semibold text-center">Register</h1>
         <div className="flex flex-col m-1 py-2 rounded-sm py-4">
           <label htmlFor="username">Username</label>
           <input
@@ -62,10 +67,10 @@ export default function Home() {
             className="bg-slate-800 text-white rounded-sm py-1"
             onClick={(e) => {
               e.preventDefault();
-              handleLogin();
+              handleRegister();
             }}
           >
-            Login
+            Register
           </button>
         </div>
       </form>
