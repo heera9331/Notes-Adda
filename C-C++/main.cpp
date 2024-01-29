@@ -38,14 +38,14 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include "c-ds-lib/Array.h"
+// #include <iostream>
+// #include "c-ds-lib/Array.h"
 
-using namespace std;
+// using namespace std;
 
-int main()
-{
-    Array *arr = new Array(0);
-    cout << arr->isFull() << endl;
-    return 0;
-}
+// int main()
+// {
+//     Array *arr = new Array(0);
+//     cout << arr->isFull() << endl;
+//     return 0;
+// }

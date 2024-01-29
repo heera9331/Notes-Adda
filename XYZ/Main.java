@@ -115,3 +115,39 @@
 // System.out.println(coronaPatient.getLessCases());
 // }
 // }
+
+public class Main {
+    static class Node {
+        int data;
+        Node next;
+    }
+
+    static Node addFirst(Node head, int val) {
+        Node newNode = new Node();
+        newNode.data = val;
+        if (head == null) {
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        return head;
+    }
+
+    static void display(Node head) {
+        Node ptr = head;
+        while (ptr != null) {
+            System.out.print(ptr.data + "->");
+            ptr = ptr.next;
+        }
+        System.out.println("NULL");
+    }
+
+    public static void main(String[] args) {
+        Node head = null;
+        display(head);
+        head = addFirst(head, 1);
+        head = addFirst(head, 2);
+        display(head);
+    }
+}
