@@ -115,6 +115,36 @@ function Input() {
 
 ## 7. React Forms
 
+```jsx
+
+function Login() {
+  const [user, setUser] = useState({username: "", password: ""});
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(user);
+  }
+  return (
+    <form action="#" onSubmit={(e)=>{handleSubmit(e)}}>
+      <h2>Login Form</h2>
+
+      <div>
+        <label for="username">Username</label>
+        <input type="text" value={user.username} onChange={(e)=>{setUser({...user, username: e.target.value})}}>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" value={user.password} onChange={(e)=>{setUser({...user, password: e.target.value})}}>
+      </div>
+
+      <button type="submit">
+        Login
+      </button>
+    </form>
+  );
+}
+
+```
+
 ## 9. Class component
 
 Class components are a type of component that was prevalent before the introduction of hooks in React 16.8. Class components use ES6 class syntax and extend the React.Component class to create a component with state and lifecycle methods.
