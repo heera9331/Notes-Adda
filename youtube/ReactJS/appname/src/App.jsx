@@ -2,102 +2,69 @@
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Login from "./components/Login/Login.jsx";
-import { Component, useState } from "react";
+import React, { Component, useState } from "react";
 
-class Counter extends Component {
-  /**
-   * initialization of component states
-   */
-  constructor() {
-    super();
-    console.log("inside constructor");
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      counter: 0,
-      title: "My Counter",
+      hasError: false,
+      error: null,
+      errorInfo: null,
     };
   }
 
-  /**
-   * we want access of original props than we use this method otherwise
-   * we take parameters inside constructor
-   */
-  static getDerivedStateFromProps(props, state) {
-    console.log("inside getDerivedPropsFromState");
-    return { ...state, title: props.title };
+  static getDerivedStateFromError(error) {
+    // Update state to show the error message
+    return {
+      hasError: true,
+      error,
+    };
   }
 
-  /**
-   * after then render of dom, the last method componentDidMount will call
-   * use: api calls, async event listner
-   *
-   * note: invoked once and immediately after React inserts the component
-   * into the Dom
-   * - Called immediately after a component is mounted. Setting state here will trigger re-rendering.
-   */
-
-  componentDidMount() {
-    console.log("inside componentDidMount");
-    // api call -> fakeapi
+  componentDidCatch(error, info) {
+    // Log the error information or perform other actions
+    console.error("Error caught by error boundary:", error);
+    console.error("Error boundary component stack trace:", info.componentStack);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate");
-    /**
-     * if nextProps == nextState
-     *  not re-render
-     * else
-     *  re-render => render()
-     */
-    return true;
-  }
-
-  /**
-   * it will return snapshot of props and state before udpate
-   * update karne se pahle jo state and props the unhe return karega
-   */
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("inside getSnapshotBeforeUpdate");
-    console.log(prevProps);
-    console.log(prevState);
-
-    return prevState;
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {}
-
-  componentWillUnmount() {
-    /**
-     * cleaning tasks such as clearInterval
-     *
-     * question -> should we set state in componentWillUnmount() => no
-     * you sould not cal setState(). once a component instance is unmounted,
-     * it will never be mounted again.
-     */
-  }
   render() {
-    console.log("inside render");
+    if (this.state.hasError) {
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <p>{this.state.error && this.state.error.toString()}</p>
+        </div>
+      );
+    }
+
+    // If no error, render the children
+    return this.props.children;
+  }
+}
+
+class MyComponent extends React.Component {
+  render() {
+    // Simulate an error in the component
+    if (Math.random() > 0.5) {
+      throw new Error("Random error occurred!");
+    }
+
     return (
       <div>
-        <h1>Title: {this.state.title}</h1>
-        <p>Counter - {this.state.counter}</p>
-        <button
-          onClick={() => {
-            this.setState({ ...this.state, counter: this.state.counter + 1 });
-          }}
-        >
-          click
-        </button>
+        {/* Normal component rendering */}
+        <h1>Hello from MyComponent!</h1>
       </div>
     );
   }
 }
 
 function App() {
+  const [click, setClick] = useState(false);
   return (
-    <>
-      <Header title="header" />
-      <Counter title={"My Fav Counter"} />
-    </>
+    <ErrorBoundary>
+      <MyComponent />
+    </ErrorBoundary>
   );
 }
 
