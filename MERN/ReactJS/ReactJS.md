@@ -145,7 +145,7 @@ function Login() {
 
 ```
 
-## 9. Class component
+## 8. Class component
 
 Class components are a type of component that was prevalent before the introduction of hooks in React 16.8. Class components use ES6 class syntax and extend the React.Component class to create a component with state and lifecycle methods.
 
@@ -188,6 +188,176 @@ export default MyClassComponent;
 - The render method is where the component's UI is defined.
 
 Class components also have lifecycle methods, such as componentDidMount, componentDidUpdate, and componentWillUnmount, which can be used for handling side effects, fetching data, or cleaning up resources.
+
+## React Component Lifecycle
+
+React lifecycle of components include initialization, mouting, rendering, updating and unmounting.
+
+```jsx
+class Counter extends Component {
+  /**
+   * initialization of component states
+   */
+  constructor() {
+    super();
+    console.log("inside constructor");
+    this.state = {
+      counter: 0,
+      title: "My Counter",
+    };
+  }
+
+  /**
+   * we want access of original props than we use this method otherwise
+   * we take parameters inside constructor
+   */
+  static getDerivedStateFromProps(props, state) {
+    console.log("inside getDerivedPropsFromState");
+    return { ...state, title: props.title };
+  }
+
+  /**
+   * after then render of dom, the last method componentDidMount will call
+   * use: api calls, async event listner
+   *
+   * note: invoked once and immediately after React inserts the component
+   * into the Dom
+   * - Called immediately after a component is mounted. Setting state here will trigger re-rendering.
+   */
+
+  componentDidMount() {
+    console.log("inside componentDidMount");
+    // api call -> fakeapi
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("shouldComponentUpdate");
+    /**
+     * if nextProps == nextState
+     *  not re-render
+     * else
+     *  re-render => render()
+     */
+    return true;
+  }
+
+  /**
+   * it will return snapshot of props and state before udpate
+   * update karne se pahle jo state and props the unhe return karega
+   */
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("inside getSnapshotBeforeUpdate");
+    console.log(prevProps);
+    console.log(prevState);
+
+    return prevState;
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {}
+
+  componentWillUnmount() {
+    /**
+     * cleaning tasks such as clearInterval
+     *
+     * question -> should we set state in componentWillUnmount() => no
+     * you sould not cal setState(). once a component instance is unmounted,
+     * it will never be mounted again.
+     */
+  }
+  render() {
+    console.log("inside render");
+    return (
+      <div>
+        <h1>Title: {this.state.title}</h1>
+        <p>Counter - {this.state.counter}</p>
+        <button
+          onClick={() => {
+            this.setState({ ...this.state, counter: this.state.counter + 1 });
+          }}
+        >
+          click
+        </button>
+      </div>
+    );
+  }
+}
+```
+
+`shouldComponentUpdate`
+
+```jsx
+class Counter1 extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    // yes component should update
+    if (this.props.value !== nextProps.value) {
+      return true;
+    }
+    // no component should not update
+    return false;
+  }
+
+  render() {
+    console.log("counter1");
+    return (
+      <div>
+        <p>Counter 1</p>
+        <p>value {this.props.value}</p>
+        <button
+          onClick={() => {
+            this.props.incrementCounter1();
+          }}
+        >
+          click
+        </button>
+      </div>
+    );
+  }
+}
+
+class Counter2 extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.value !== nextProps.value) {
+      return true;
+    }
+    return false;
+  }
+
+  render() {
+    console.log("counter2");
+    return (
+      <div>
+        <p>Counter 2</p>
+        <p>value {this.props.value}</p>
+        <button
+          onClick={() => {
+            this.props.incrementCounter2();
+          }}
+        >
+          click
+        </button>
+      </div>
+    );
+  }
+}
+
+function Counter() {
+  const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+
+  function incrementCounter1() {
+    setCounter1(counter1 + 1);
+  }
+  function incrementCounter2() {
+    setCounter2(counter2 + 1);
+  }
+  return (
+    <div>
+      <Counter1 value={counter1} incrementCounter1={incrementCounter1} />
+      <Counter2 value={counter2} incrementCounter2={incrementCounter2} />
+    </div>
+  );
+}
+```
 
 ## 10. React hooks
 
