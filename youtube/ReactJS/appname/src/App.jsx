@@ -1,59 +1,54 @@
 /* eslint-disable no-unused-vars */
 import "./App.css";
-import Header from "./components/Header/Header.jsx";
-import Login from "./components/Login/Login.jsx";
+
 import React, { Component, useState } from "react";
 
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
+class MyCounter extends Component {
+  // 1.
+  constructor() {
+    console.log("inside constructor");
+    super();
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
+      count: 0,
     };
   }
-
-  static getDerivedStateFromError(error) {
-    // Update state to show the error message
-    return {
-      hasError: true,
-      error,
-    };
+  // 2.
+  static getDerivedStateFromProps(props, state) {
+    console.log("inside getDerivedStateFromProps");
   }
 
-  componentDidCatch(error, info) {
-    // Log the error information or perform other actions
-    console.error("Error caught by error boundary:", error);
-    console.error("Error boundary component stack trace:", info.componentStack);
+  // 4.
+  componentDidMount() {
+    console.log("inside componentDidMount");
   }
 
+  // 5
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("inside shouldComponentUpdate");
+    console.log(nextProps);
+    console.log(nextState);
+    if (nextState.count !== this.state.count) return true;
+
+    return false;
+  }
+
+  componentWillUnmount() {
+    console.log("inside componentWillUnmount");
+  }
+
+  // 3.
   render() {
-    if (this.state.hasError) {
-      return (
-        <div>
-          <h2>Something went wrong.</h2>
-          <p>{this.state.error && this.state.error.toString()}</p>
-        </div>
-      );
-    }
-
-    // If no error, render the children
-    return this.props.children;
-  }
-}
-
-class MyComponent extends React.Component {
-  render() {
-    // Simulate an error in the component
-    if (Math.random() > 0.5) {
-      throw new Error("Random error occurred!");
-    }
-
+    console.log("inside render");
     return (
       <div>
-        {/* Normal component rendering */}
-        <h1>Hello from MyComponent!</h1>
+        <p>Value {this.state.count}</p>
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}
+        >
+          Click
+        </button>
       </div>
     );
   }
@@ -62,9 +57,17 @@ class MyComponent extends React.Component {
 function App() {
   const [click, setClick] = useState(false);
   return (
-    <ErrorBoundary>
-      <MyComponent />
-    </ErrorBoundary>
+    <>
+      <h1>ReactJS</h1>
+      <button
+        onClick={() => {
+          setClick(!click);
+        }}
+      >
+        {click ? "Hide" : "Show"} counter
+      </button>
+      {click && <MyCounter count={1} />}
+    </>
   );
 }
 
