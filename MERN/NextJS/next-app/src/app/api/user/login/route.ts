@@ -15,7 +15,7 @@ export async function POST(request: NextRequest){
             return NextResponse.json({error: 'some fields are missing'});
         }
 
-        let res = await User.findOne({username, password});
+        let res = await User.findOne({username, password}).select('-_id -password');
         console.log(res);
         return NextResponse.json({user: res});
     } catch (error: any) {

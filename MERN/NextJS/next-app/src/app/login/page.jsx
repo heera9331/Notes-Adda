@@ -3,18 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [user, setUser] = useState({ username: "", password: "" });
-
+  const router = useRouter();
   const handleLogin = async () => {
     try {
       console.log(user);
-      let res = await fetch("/api/user/login", {
-        method: "POST",
-        body: JSON.stringify(user),
-      });
-      console.log(await res.json());
+      let res = await axios.post("/api/user/login", user);
+      res = res.data;
+      if (res?.error) {
+        alert(res.error);
+      } else {
+        router.push("/home");
+      }
     } catch (error) {
       console.log("dikkat hai", error);
     }

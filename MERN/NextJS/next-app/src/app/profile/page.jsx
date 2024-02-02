@@ -1,12 +1,9 @@
-"use client"
 import React from "react";
 
-function page() {
+export default function page() {
   return (
-    <div>
+    <div className="text-white">
       <h1>Profile</h1>
     </div>
   );
 }
-
-export default page;

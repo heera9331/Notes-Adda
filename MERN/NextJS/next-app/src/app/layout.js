@@ -26,13 +26,13 @@ export default function RootLayout({ children }) {
               className="hover:bg-white hover:text-black rounded-sm px-2 py-1"
             >
               Login
-            </Link> 
+            </Link>
             <Link
               href={"/profile"}
               className="hover:bg-white hover:text-black rounded-sm px-2 py-1"
             >
               Profile
-            </Link> 
+            </Link>
             <Link
               href={"/register"}
               className="hover:bg-white hover:text-black rounded-sm px-2 py-1"

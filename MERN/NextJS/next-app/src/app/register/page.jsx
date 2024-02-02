@@ -1,23 +1,20 @@
 "use client";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
+import axios from "axios";
 export default function Home() {
   const [user, setUser] = useState({ username: "", password: "" });
+  const router = useState();
 
   const handleRegister = async () => {
     try {
       console.log(user);
-      let res = await fetch("/api/user/register", {
-        method: "POST",
-        body: JSON.stringify(user),
-      });
+      let res = await axios.post("/api/user/register", user);
       console.log(res);
-
-      if (res.ok) {
-        console.log(await res.json());
-        alert("success");
+      if (res.data?.error) {
+        alert(res.data.error);
       } else {
-        alert("something went wrong");
+        router.push("/home");
       }
     } catch (error) {
       alert("something went wrong");

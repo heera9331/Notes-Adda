@@ -19,7 +19,6 @@ export async function POST(request: NextRequest){
         let user = await User.insertMany([{username, password}]);
         console.log(user)
         return NextResponse.json({user});
-
     } catch (error: any) {
         return NextResponse.json({error: error.message}, {status: 500})
     }
