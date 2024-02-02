@@ -12,10 +12,12 @@ export default function Home() {
     try {
       console.log(user);
       let res = await axios.post("/api/user/login", user);
+      console.log(res);
       res = res.data;
       if (res?.error) {
         alert(res.error);
       } else {
+        console.log("got to home");
         router.push("/home");
       }
     } catch (error) {

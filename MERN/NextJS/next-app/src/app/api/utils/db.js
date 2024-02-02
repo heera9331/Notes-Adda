@@ -14,14 +14,15 @@ const connectDB = async () => {
     // Check if a connection is already established
     if (connection.isConnected) {
       console.log("Using existing connection");
-    } else {
-      console.log("establishing a new connection");
-      // If no existing connection, establish a new one
-      const db = await mongoose.connect(mongo_uri);
-
-      // Update the connection state
-      connection.isConnected = db.connections[0].readyState;
+      return;
     }
+
+    console.log("establishing a new connection");
+    // If no existing connection, establish a new one
+    const db = await mongoose.connect(mongo_uri);
+
+    // Update the connection state
+    connection.isConnected = db.connections[0].readyState;
   } catch (error) {
     // Log any errors that occur during the connection attempt
     console.log(error);

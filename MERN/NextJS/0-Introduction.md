@@ -18,4 +18,7 @@ Next.js is a React framework for building full-stack web applications. You use R
 
 ## App Router vs Pages Router
 
-Next.js has two different routers: the App Router and the Pages Router. The App Router is a newer router that allows you to use React's latest features, such as Server Components and Streaming. The Pages Router is the original Next.js router, which allowed you to build server-rendered React applications and continues to be supported for older Next.js applications.
+Next.js has two different routers: the App Router and the Pages Router.
+
+> The App Router is a newer router that allows you to use React's latest features, such as Server Components and Streaming.
+> The Pages Router is the original Next.js router, which allowed you to build server-rendered React applications and continues to be supported for older Next.js applications.

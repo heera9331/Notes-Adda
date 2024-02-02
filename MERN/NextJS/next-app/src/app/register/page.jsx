@@ -9,7 +9,9 @@ export default function Home() {
   const handleRegister = async () => {
     try {
       console.log(user);
-      let res = await axios.post("/api/user/register", user);
+      // let res = await axios.post("/api/user/register", user);
+      // temporery we using login
+      let res = await axios.post("/api/user/login", user);
       console.log(res);
       if (res.data?.error) {
         alert(res.data.error);
