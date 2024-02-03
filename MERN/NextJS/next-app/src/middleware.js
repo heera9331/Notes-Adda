@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import jws from "jws";
 
 export function middleware(request) {
   const path = request.nextUrl.pathname;
@@ -15,18 +14,11 @@ export function middleware(request) {
   }
   console.log("inside middleware", token);
 
-  let signature = jws.createVerify({
-    publicKey: process.env.KEY,
-  });
-
-  console.log(signature);
-  token = signature;
-
-  if (isPublicPath && token) {
+  if (isPublicPath) {
     return NextResponse.redirect(new URL("/", request.nextUrl));
   }
 
-  if (!isPublicPath && !token) {
+  if (!isPublicPath) {
     return NextResponse.redirect(new URL("/login", request.nextUrl));
   }
 }
