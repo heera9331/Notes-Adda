@@ -1,3 +1,16 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(1);
+        // list.set(0, 4);
+        list.add(0, 2);
+        list.add(0, 1);
+        System.out.println(list);
+        Collections.reverse(list);
+    }
+}
 
 // public class Main {
 // static int lcs(String s1, String s2) {
@@ -12,7 +25,7 @@
 // return max;
 // }
 
-// public static void main(String[] args) {
+// public stati void main(String[] args) {
 // String s1 = "abcefg";
 // String s2 = "gfabcedfg";
 // System.out.println(lcs(s1, s2));
@@ -116,38 +129,38 @@
 // }
 // }
 
-public class Main {
-    static class Node {
-        int data;
-        Node next;
-    }
+// public class Main {
+// static class Node {
+// int data;
+// Node next;
+// }
 
-    static Node addFirst(Node head, int val) {
-        Node newNode = new Node();
-        newNode.data = val;
-        if (head == null) {
-            head = newNode;
-        } else {
-            newNode.next = head;
-            head = newNode;
-        }
-        return head;
-    }
+// static Node addFirst(Node head, int val) {
+// Node newNode = new Node();
+// newNode.data = val;
+// if (head == null) {
+// head = newNode;
+// } else {
+// newNode.next = head;
+// head = newNode;
+// }
+// return head;
+// }
 
-    static void display(Node head) {
-        Node ptr = head;
-        while (ptr != null) {
-            System.out.print(ptr.data + "->");
-            ptr = ptr.next;
-        }
-        System.out.println("NULL");
-    }
+// static void display(Node head) {
+// Node ptr = head;
+// while (ptr != null) {
+// System.out.print(ptr.data + "->");
+// ptr = ptr.next;
+// }
+// System.out.println("NULL");
+// }
 
-    public static void main(String[] args) {
-        Node head = null;
-        display(head);
-        head = addFirst(head, 1);
-        head = addFirst(head, 2);
-        display(head);
-    }
-}
+// public static void main(String[] args) {
+// Node head = null;
+// display(head);
+// head = addFirst(head, 1);
+// head = addFirst(head, 2);
+// display(head);
+// }
+// }
