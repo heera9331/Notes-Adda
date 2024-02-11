@@ -1,7 +1,7 @@
 # Introduction
-<hr>
 
 Python is a object-oriented programming, which is used in many fields
+
 1. Education
 2. Health-care
 3. IoT
@@ -14,30 +14,162 @@ Python is a object-oriented programming, which is used in many fields
 10. Business Analytics
 
 ## Key Points
-* Designed by: Guido van Rossum
-* Developer: Python Software Foundation
-* Development by guido van rossum in 1991
-* Multi-paradigm
-* Object-oriented
-* Dynamic 
-* High-level language
-* Interpreted language
-* Automatic Garwage Collection
-* Easy user friendly
-* Cross-platform
-* Platform dependent
 
-<hr>
+- Designed by: Guido van Rossum
+- Developer: Python Software Foundation
+- Development by guido van rossum in 1991
+- Multi-paradigm
+- Object-oriented
+- Dynamic
+- High-level language
+- Interpreted language
+- Automatic Garwage Collection
+- Easy user friendly
+- Cross-platform
+- Platform dependent
+
+> Python3 is the latest version of python.
+
+## 0. Installation
+
+- Search on any browser `download python` open first link, and download the latest version of python.
+- after the downling install python just like a game.
+- check installation open `cmd` and type the command `python --version` in windows
+
+- Linux installation - open the `terminal` and write command `sudo apt install python` enter password.
+- verifying the installation
+- for linux `python3 --version`
+
+## 2. Hello World
+
+```py
+# hello world program
+print("Hello World!")
+```
+
+> print() - is a function
+
+## 2. Variable and Constant
+
+**Variable** - like a container which can hold some value and it can be changed during runtime.
+
+```py
+x = 5
+
+x = 10 # value is replaced
+```
+
+**Contant** - like a container which can hold some value and it can not be changed during runtime.
+
+```py
+const x = 5
+
+x = 10 # cause an error
+```
+
+**Remember**
+
+- variable are case sensitive.
+- variable are always an identifier
+
+## 3. Identifier
+
+An identifier is a name given to entities like variables, functions, classes, modules, etc.
+
+- It's used to uniquely identify these entities in the program.
+- Identifiers follow certain rules and conventions depending on the programming language being used.
+
+In Python, identifiers must adhere to the following rules:
+
+- Must begin with a letter (a-z, A-Z) or an underscore (\_)
+- Followed by zero or more letters, underscores, or digits (0-9)
+- Case-sensitive (e.g., myVar, MyVar, and MYVAR are all different identifiers)
+- Cannot be a reserved keyword (e.g., if, else, for, while, etc.)
+
+## 4. Keywords
+
+Keywords are reserved word, that have an specific meaning.
+
+Example - (e.g., if, else, for, while, etc.)
+
+> keywords, we can't use as a an identifier name.
+
+## 5. Comments
+
+Text that is ignored by the interpreter or compiler.
+
+> In python, comments are starts widh `H`
+
+## 6. Tokens
+
+Tokens are the smallest units of a program that are meaningful to the compiler or interpreter.
+
+- Tokens are the building blocks of source code and represent individual elements such as keywords, identifiers, operators, literals, and punctuation.
+
+```py
+# 1. Literals
+# Numeric - 2.34, 2.5e2
+# String - 'hi', "hello", """also literal"""
+
+# 2. Operators
+# 3. Punctuation - (),[], {}, `,`, `.`, `;`, `:`
+# 4. Comments - # comment
+
+# 5. Keywords
+# 6. Identifiers
+```
+
+## 6. Operators
+
+Operators are nothing but is symbols. that can perform some mathematic and logical operation.
+
+1. Arithematic
+2. Logical
+3. Comparison/Relational
+4. Bitwise
+5. Assignment
+6. Membership (in, not in)
+7. Identity (is, is not)
+
+**Another Type**
+
+Based on operands
+
+1. Unary
+2. Binary
+3. Ternary
+
+## 7. Operator Precedence
+
+Operator precedence describes the order in which operations are performed.
+
+## 7. Data Types
+
+```py
+1. Primitive
+    int
+    float
+    bool
+2. Non-Primitive/Derived
+    List
+    String
+    Set
+    Tuple
+    Dictionary
+3. User defined
+    class
+
+```
+
+## 8. Decision Making Statements
 
 ```markdown
 if else statements
 
 syntax:
 
-if condition:
-    # statement
-else:
-    # statement
+if condition: # statement
+else: # statement
 ```
 
 ```java
@@ -65,16 +197,17 @@ for i in range(len(fname)):
 ```
 
 # Set
+
 <hr>
 
-* Duplicate not allowed	
-* Sets are immutable
-* Once a set is created, you cannot change its items, but you can add new items.
+- Duplicate not allowed
+- Sets are immutable
+- Once a set is created, you cannot change its items, but you can add new items.
 
 ```python
 A set is a collection which is unordered, unchangeable*,
 and unindexed.
-* Note: Set items are unchangeable, but you can remove 
+* Note: Set items are unchangeable, but you can remove
 items and add new items.
 
 
@@ -95,7 +228,7 @@ for val in s:
     print(val)
 ```
 
-``` python
+```python
 # Methods in set
 
 s.add() -> add element in set
@@ -113,6 +246,7 @@ s.pop() -> remove random element from set
 ```
 
 # Input/Output
+
 <hr>
 ## Input
 
@@ -135,7 +269,7 @@ num1 = float(input())
 ## Output
 
 ```python
-print function is used to display message to the 
+print function is used to display message to the
 console window, print function print output with new line,
 
 # Example
@@ -153,17 +287,17 @@ print("%o"%(deci))
 ```
 
 # IO Formatting
+
 <hr>
 print("three decimal places %.3f"%5.5) # 5.500
 
-
 List
 
-* List is a immutable collection of object/elements/variables.
-* Support all feature of an array data type
-* Advanced compare to array
-* Negative/Positive both type of indexing is possbile in python list data type
-* Lots of function available in python
+- List is a immutable collection of object/elements/variables.
+- Support all feature of an array data type
+- Advanced compare to array
+- Negative/Positive both type of indexing is possbile in python list data type
+- Lots of function available in python
 
 ```python
 # creation of empty list
@@ -229,9 +363,9 @@ print(obj)
 
 String module
 
-* String are sequence of characters enclosed within double quotes.
-* Strings are immutable in python & java.
-* Substring is a continuous part of string.
+- String are sequence of characters enclosed within double quotes.
+- Strings are immutable in python & java.
+- Substring is a continuous part of string.
 
 ## **String method**
 
@@ -274,14 +408,12 @@ print(des.index("od")) # 18
 
 → in keyword check existence of a value in a sequence
 
- 
-
 ```python
 print(4 in [1,2,3,4]) # True
 
 # -----------------------------
 value = 1
-sequence = [1,2,3,4,5] 
+sequence = [1,2,3,4,5]
 print(value in sequence) # True
 
 # --------------------------------
