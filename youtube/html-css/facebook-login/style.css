@@ -1,0 +1,77 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f0f2f5;
+}
+
+form {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin: auto;
+  padding: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 5px;
+}
+
+.formGroup {
+  margin: 6px 0;
+}
+.formGroup input {
+  width: 92%;
+  padding: 8px;
+  border: 0.5px solid rgb(207, 204, 204);
+  border-radius: 5px;
+  outline: none;
+}
+
+.loginBtn {
+  border-radius: 5px;
+}
+
+.loginBtn button {
+  border: 0.5px solid rgb(207, 204, 204);
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: #1877f2;
+}
+
+.forgotBtn p {
+  color: #1877f2;
+  font-size: 5px;
+  text-align: center;
+}
+
+hr {
+  width: 92%;
+  border-width: 1px;
+  border: 0.5px solid rgb(207, 204, 204);
+}
+.accountBtn {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.accountBtn button {
+  border: 0.5px solid rgb(207, 204, 204);
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: #36a420;
+}
+
+.formGroup input:focus {
+  border: 1px solid #1877f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1877f2;
+}
