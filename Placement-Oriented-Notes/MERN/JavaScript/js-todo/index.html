@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Todo</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-200">
+    <div class="bg-white w-[400px] m-auto my-4 rounded-sm">
+      <h2 class="text-2xl font-semibold bg-stone-800 text-white text-center">
+        JS - Todo
+      </h2>
+      <div class="p-2">
+        <form action="#" method="post" class="flex flex-col py-4 gap-2">
+          <div class="flex flex-col">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              name="title"
+              placeholder="Enter title"
+              class="outline-none bg-gray-300 rounded-sm"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="desc">Description</label>
+            <input
+              type="text"
+              name="desc"
+              placeholder="Enter desc"
+              class="outline-none bg-gray-300 rounded-sm"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="font-semibold bg-stone-800 text-white rounded-sm"
+              type="submit"
+            >
+              Add
+            </button>
+          </div>
+        </form>
+
+        <!-- task -->
+        <ul id="todos" class="flex flex-col">
+          <!-- <li>Default - Description</li> -->
+        </ul>
+
+        <!-- completed -->
+        <ul id="todos-done"></ul>
+      </div>
+    </div>
+  </body>
+</html>
