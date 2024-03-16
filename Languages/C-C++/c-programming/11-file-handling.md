@@ -13,38 +13,36 @@
 
 > rb -> read binary and rw -> write binary
 
-**Opening a File**
+**Write**
 
 ```c
-FILE *file_pointer = fopen("filename", "mode");
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+
+int main()
+{
+    /**
+     * w - mode
+     * input.txt - input file
+     */
+
+    fptr = fopen("input.txt", "w");
+
+    if (!fptr)
+    {
+        printf("file can't created or opened\n");
+        return -1;
+    }
+    fprintf(fptr, "%s", "Hello this is fprintf function1\n");
+    fprintf(fptr, "%s", "Hello this is fprintf function2\n");
+    fputs("this content is writted by fputs function\n", fptr); 
+    fputc(65, fptr);
+    fputc('\n', fptr);  
+    return 0;
+}
 ```
 
 **Reading a File**
-
-```c
-fscanf(buffer, "%s", file_pointer);
-```
-
-For example, to open a file called "data.txt" for reading, you can use the following code:
-
-```
-
-FILE *fp;
-fp = fopen("data.txt", "r");
-```
-
-To open a file for writing, you can use the following code:
-
-```c
  
-FILE *fp;
-fp = fopen("data.txt", "w");
-```
-
-To open a file for reading and writing, you can use the following code:
-
-```c
- 
-FILE *fp;
-fp = fopen("data.txt", "r+");
-```
