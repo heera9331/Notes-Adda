@@ -45,4 +45,35 @@ int main()
 ```
 
 **Reading a File**
+
+
+```c
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+int main() {
+    char buffer[100];
+
+    /**
+     * r - mode
+     * input.txt - input file
+     */
+
+    fptr = fopen("input.txt", "r");
+
+    if (!fptr) {
+        printf("file can't open\n");
+        return -1;
+    }
+    //read entire line
+    fgets(buffer, 100, fptr);
+    char ch = fgetc(fptr);
+    
+    // output
+    puts(buffer);
+    printf("%c\n", ch);
+    return 0;
+}
+```
  
