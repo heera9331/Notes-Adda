@@ -76,4 +76,32 @@ int main() {
     return 0;
 }
 ```
- 
+
+**Append**
+
+```c
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+int main() {
+    char buffer[100];
+
+    /**
+     * a - mode
+     * input.txt - filename
+     */
+
+    fptr = fopen("input.txt", "a");
+
+    if (!fptr) {
+        printf("file can't open\n");
+        return -1;
+    }
+
+    fputs("Appended by function\n", fptr);
+    fputc(65, fptr);
+    return 0;
+}
+
+```
