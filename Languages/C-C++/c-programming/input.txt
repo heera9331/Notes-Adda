@@ -1,0 +1,4 @@
+content writted by fptrinf function
+fputs function
+0new data inserted by append mode
+new data inserted by append mode

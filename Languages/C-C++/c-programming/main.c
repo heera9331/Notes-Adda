@@ -1,19 +1,8 @@
-
+ 
 #include <stdio.h>
-#include <string.h>
 
-int main()
-{
-    FILE *fptr = NULL;
-    fptr = fopen("input.txt", "a");
-
-    if (fptr == NULL)
-    {
-        printf("file is not open\n");
-    }
-    else
-    {
-        printf("file is opened\n");
-    }
+int main() {
+    int n1 = 10;
+    printf("%d\n", n1);
     return 0;
 }
