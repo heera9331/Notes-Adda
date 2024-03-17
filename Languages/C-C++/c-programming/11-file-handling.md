@@ -13,38 +13,95 @@
 
 > rb -> read binary and rw -> write binary
 
-**Opening a File**
+**Write**
 
 ```c
-FILE *file_pointer = fopen("filename", "mode");
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+
+int main()
+{
+    /**
+     * w - mode
+     * input.txt - input file
+     */
+
+    fptr = fopen("input.txt", "w");
+
+    if (!fptr)
+    {
+        printf("file can't created or opened\n");
+        return -1;
+    }
+    fprintf(fptr, "%s", "Hello this is fprintf function1\n");
+    fprintf(fptr, "%s", "Hello this is fprintf function2\n");
+    fputs("this content is writted by fputs function\n", fptr); 
+    fputc(65, fptr);
+    fputc('\n', fptr);  
+    return 0;
+}
 ```
 
 **Reading a File**
 
-```c
-fscanf(buffer, "%s", file_pointer);
-```
-
-For example, to open a file called "data.txt" for reading, you can use the following code:
-
-```
-
-FILE *fp;
-fp = fopen("data.txt", "r");
-```
-
-To open a file for writing, you can use the following code:
 
 ```c
- 
-FILE *fp;
-fp = fopen("data.txt", "w");
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+int main() {
+    char buffer[100];
+
+    /**
+     * r - mode
+     * input.txt - input file
+     */
+
+    fptr = fopen("input.txt", "r");
+
+    if (!fptr) {
+        printf("file can't open\n");
+        return -1;
+    }
+    //read entire line
+    fgets(buffer, 100, fptr);
+    char ch = fgetc(fptr);
+    
+    // output
+    puts(buffer);
+    printf("%c\n", ch);
+    return 0;
+}
 ```
 
-To open a file for reading and writing, you can use the following code:
+**Append**
 
 ```c
- 
-FILE *fp;
-fp = fopen("data.txt", "r+");
+
+#include <stdio.h>
+
+FILE *fptr = NULL;
+int main() {
+    char buffer[100];
+
+    /**
+     * a - mode
+     * input.txt - filename
+     */
+
+    fptr = fopen("input.txt", "a");
+
+    if (!fptr) {
+        printf("file can't open\n");
+        return -1;
+    }
+
+    fputs("Appended by function\n", fptr);
+    fputc(65, fptr);
+    return 0;
+}
+
 ```
