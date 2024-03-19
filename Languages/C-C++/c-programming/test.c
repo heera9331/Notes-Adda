@@ -1,3 +1,3 @@
 
-int testVar;
+int testVar = 56;
  

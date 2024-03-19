@@ -1,8 +1,15 @@
  
-#include <stdio.h>
 
+
+#include <stdio.h>  
+ 
+ 
 int main() {
-    int n1 = 10;
-    printf("%d\n", n1);
+    int v = 5;
+    if(v == 5) {
+
+    } else {
+        // 
+    }
     return 0;
 }
